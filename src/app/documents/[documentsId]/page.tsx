@@ -7,7 +7,7 @@ interface IDocumentsIdProps {
 const DocumentsId = async ({ params }: IDocumentsIdProps) => {
   const { documentsId } = await params;
   return (
-    <div>
+    <div className="min-h-screen bg-[#FAFBFD]">
       {documentsId}
       <Editor />
     </div>
