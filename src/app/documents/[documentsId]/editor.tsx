@@ -16,6 +16,7 @@ import Underline from "@tiptap/extension-underline";
 
 import { useEditorStore } from "@/store/use-editor-store";
 import Color from "@tiptap/extension-color";
+import Link from "@tiptap/extension-link";
 
 export const Editor = () => {
   const { setEditor } = useEditorStore();
@@ -58,6 +59,11 @@ export const Editor = () => {
       FontFamily,
       Underline,
       Color,
+      Link.configure({
+        openOnClick: false,
+        autolink: true,
+        defaultProtocol: "https",
+      }),
       Highlight.configure({
         multicolor: true,
       }),
@@ -74,10 +80,7 @@ export const Editor = () => {
         nested: true,
       }),
     ],
-    content: `
-    <img src="https://i.pinimg.com/736x/96/1d/6d/961d6d5199d11056b10eea2cf8cd3c5b.jpg" />
-
-  `,
+    content: ``,
   });
   return (
     <div className="size-full overflow-x-auto bg-[#F9FDFB] px-4 print:bg-white print:p-0 print:overflow-visible">
