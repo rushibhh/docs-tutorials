@@ -13,6 +13,7 @@ import FontFamily from "@tiptap/extension-font-family";
 import TextStyle from "@tiptap/extension-text-style";
 import Highlight from "@tiptap/extension-highlight";
 import Underline from "@tiptap/extension-underline";
+import TextAlign from "@tiptap/extension-text-align";
 
 import { useEditorStore } from "@/store/use-editor-store";
 import Color from "@tiptap/extension-color";
@@ -73,6 +74,9 @@ export const Editor = () => {
         resizable: true,
       }),
       TableRow,
+      TextAlign.configure({
+        types: ["heading", "paragraph"],
+      }),
       TableHeader,
       TableCell,
       TaskList,
