@@ -15,6 +15,7 @@ import Highlight from "@tiptap/extension-highlight";
 import Underline from "@tiptap/extension-underline";
 import TextAlign from "@tiptap/extension-text-align";
 import { fontSizeExtensions } from "@/app/extensions/font-size";
+import { lineHeightExtensions } from "@/app/extensions/line-height";
 
 import { useEditorStore } from "@/store/use-editor-store";
 import Color from "@tiptap/extension-color";
@@ -57,6 +58,10 @@ export const Editor = () => {
     },
     extensions: [
       StarterKit,
+      lineHeightExtensions.configure({
+        types: ["heading", "paragraph"],
+        defaultLineHeight: "normal",
+      }),
       fontSizeExtensions,
       TextStyle,
       FontFamily,

@@ -1,4 +1,4 @@
-import { elementFromString, Extension, Extensions } from "@tiptap/react";
+import { Extension } from "@tiptap/react";
 import "@tiptap/extension-text-style";
 
 declare module "@tiptap/core" {
