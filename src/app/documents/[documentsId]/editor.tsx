@@ -14,6 +14,7 @@ import TextStyle from "@tiptap/extension-text-style";
 import Highlight from "@tiptap/extension-highlight";
 import Underline from "@tiptap/extension-underline";
 import TextAlign from "@tiptap/extension-text-align";
+import { fontSizeExtensions } from "@/app/extensions/font-size";
 
 import { useEditorStore } from "@/store/use-editor-store";
 import Color from "@tiptap/extension-color";
@@ -56,6 +57,7 @@ export const Editor = () => {
     },
     extensions: [
       StarterKit,
+      fontSizeExtensions,
       TextStyle,
       FontFamily,
       Underline,
