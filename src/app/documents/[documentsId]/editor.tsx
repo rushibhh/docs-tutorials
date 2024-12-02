@@ -11,9 +11,11 @@ import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import FontFamily from "@tiptap/extension-font-family";
 import TextStyle from "@tiptap/extension-text-style";
+import Highlight from "@tiptap/extension-highlight";
+import Underline from "@tiptap/extension-underline";
 
 import { useEditorStore } from "@/store/use-editor-store";
-import Underline from "@tiptap/extension-underline";
+import Color from "@tiptap/extension-color";
 
 export const Editor = () => {
   const { setEditor } = useEditorStore();
@@ -55,6 +57,10 @@ export const Editor = () => {
       TextStyle,
       FontFamily,
       Underline,
+      Color,
+      Highlight.configure({
+        multicolor: true,
+      }),
       Image,
       ImageResize,
       Table.configure({
